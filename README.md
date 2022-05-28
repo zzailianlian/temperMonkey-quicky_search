@@ -25,4 +25,3 @@
 
 ### 入口
 * [Greasy Fork](https://greasyfork.org/zh-CN/scripts/442543-cms-management)
-* [Gist](https://gist.github.com/zzailianlian/d1f17870ccf06354a9998aacd768acf8#file-cms-backend-management)
