@@ -24,4 +24,4 @@
 * windows： windows + g
 
 ### 入口
-* [Greasy Fork](https://greasyfork.org/zh-CN/scripts/442543-cms-management)
+* [Greasy Fork](https://greasyfork.org/zh-CN/scripts/445659-quickly-search)
