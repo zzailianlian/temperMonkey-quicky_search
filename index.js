@@ -1,9 +1,11 @@
 // ==UserScript==
-// @name         快捷搜索
+// @name:zh-CN   快捷搜索
+// @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      0.3
+// @description  npmjs、bilibibli、bootstracpCDN快捷搜索，更多快捷搜索
+// @license      MIT
+// @author       zzailianlian
 // @match        https://www.npmjs.com/*
 // @match        http://portal.ai.babytree-inc.com/*
 // @match        https://www.bootcdn.cn/*
