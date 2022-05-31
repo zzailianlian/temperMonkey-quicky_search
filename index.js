@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  npmjs、bilibibli、bootstracpCDN快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -11,6 +11,7 @@
 // @match        https://www.bootcdn.cn/*
 // @match        https://www.bilibili.com/*
 // @match        https://search.bilibili.com/*
+// @match        http://splunk.ali.plt.babytree-inc.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -20,27 +21,39 @@
   document.onkeydown = function (event) {
     var e = event || window.event;
     console.log(e, e.keyCode);
+    // meta + g
     if (e && e.metaKey && e.keyCode == 71) {
-      // meta + g
       e.preventDefault();
+      // npmjs.com的搜索框定位
       if (window.location.origin.includes('www.npmjs.com')) {
-        // npmjs.com的搜索框定位
         document.querySelector('input[type=\'search\']').focus()
       }
+      // www.bootcdn.cn的搜索框定位
       if (window.location.origin.includes('www.bootcdn.cn')) {
-        // www.bootcdn.cn的搜索框定位
         document.querySelector('.search-wraper input[type=\'text\']').focus()
       }
+      // bilibili首页的搜索框定位
       if (window.location.origin.includes('www.bilibili.com')) {
-        // bilibili首页的搜索框定位
         document.querySelector('.nav-search-content input').focus()
       }
 
+      // bilibili搜索页的搜索框定位
       if (window.location.origin.includes('search.bilibili.com')) {
-        // bilibili搜索页的搜索框定位
         document.querySelector('.search-input-el').focus()
       }
+      // splunk搜索
+      if (window.location.origin.includes('splunk.ali.plt.babytree-inc.com')) {
+        document.querySelector('.ace_text-input').focus()
+      }
     }
+    // cmd + enter
+    if (e && e.metaKey && e.keyCode == 13) {
+      // splunk搜索按钮点击
+      if (window.location.origin.includes('splunk.ali.plt.babytree-inc.com')) {
+        document.querySelector("body > div.shared-page > div.main-section-body > div > div.section-padded.section-header > div.search-bar-wrapper.shared-searchbar > form > table > tbody > tr > td.search-button > a").click()
+      }
+    }
+
     if (window.location.origin.includes('portal.ai.babytree-inc.com')) {
       if (e && e.metaKey && (e.keyCode == 71 || e.keyCode == 70)) {
         e.preventDefault();
