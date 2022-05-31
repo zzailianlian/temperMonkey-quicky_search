@@ -14,6 +14,12 @@
 
 * mac：cmd + g
 * windows： windows + g
+
+#### splunk.ali.plt.babytree-inc.com的搜索框定位
+
+* mac：cmd + g
+* windows： windows + g
+
 #### bilibili首页的搜索框定位
 
 * mac：cmd + g
