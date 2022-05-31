@@ -2,8 +2,8 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.4
-// @description  npmjs、bilibibli、bootstracpCDN快捷搜索，更多快捷搜索
+// @version      0.5
+// @description  npmjs、bilibibli、bootstracpCDN、splunk快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
 // @match        https://www.npmjs.com/*
