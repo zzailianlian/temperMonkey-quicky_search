@@ -2,8 +2,8 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.5
-// @description  npmjs、bilibibli、bootstracpCDN、splunk快捷搜索，更多快捷搜索
+// @version      0.6
+// @description  npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
 // @match        https://www.npmjs.com/*
@@ -12,6 +12,8 @@
 // @match        https://www.bilibili.com/*
 // @match        https://search.bilibili.com/*
 // @match        http://splunk.ali.plt.babytree-inc.com/*
+// @match        http://developer.chrome.com/*
+// @match        https://developer.chrome.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -43,6 +45,10 @@
       }
       // splunk搜索
       if (window.location.origin.includes('splunk.ali.plt.babytree-inc.com')) {
+        document.querySelector('.ace_text-input').focus()
+      }
+           // 谷歌api搜索
+      if (window.location.origin.includes('developer.chrome.com/docs/extensions/reference')) {
         document.querySelector('.ace_text-input').focus()
       }
     }
