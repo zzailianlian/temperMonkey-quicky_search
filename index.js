@@ -47,8 +47,8 @@
       if (window.location.origin.includes('splunk.ali.plt.babytree-inc.com')) {
         document.querySelector('.ace_text-input').focus()
       }
-           // 谷歌api搜索
-      if (window.location.origin.includes('developer.chrome.com/docs/extensions/reference')) {
+      // 谷歌api搜索
+      if (window.location.origin.includes('developer.chrome.com')) {
         document.querySelector('.ace_text-input').focus()
       }
     }
