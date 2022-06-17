@@ -49,7 +49,7 @@
       }
       // 谷歌api搜索
       if (window.location.origin.includes('developer.chrome.com')) {
-        document.querySelector('.ace_text-input').focus()
+        document.querySelector('.search-box__input').focus()
       }
     }
     // cmd + enter
