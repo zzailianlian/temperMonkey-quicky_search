@@ -2,8 +2,8 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.7
-// @description  npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
+// @version      0.8
+// @description  掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
 // @match        https://www.npmjs.com/*
@@ -13,6 +13,8 @@
 // @match        https://search.bilibili.com/*
 // @match        http://splunk.ali.plt.babytree-inc.com/*
 // @match        http://developer.chrome.com/*
+// @match        https://juejin.cn/*
+// @match        https://juejin.im/*
 // @match        https://developer.chrome.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
@@ -50,6 +52,10 @@
       // 谷歌api搜索
       if (window.location.origin.includes('developer.chrome.com')) {
         document.querySelector('.search-box__input').focus()
+      }
+      // 掘金搜索
+      if (window.location.origin.includes('juejin')) {
+        document.querySelector('input[type="search"]').focus()
       }
     }
     // cmd + enter

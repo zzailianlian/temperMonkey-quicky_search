@@ -29,5 +29,7 @@
 * mac：cmd + g
 * windows： windows + g
 
+**掘金、google API搜索同上**
+
 ### 入口
 * [Greasy Fork](https://greasyfork.org/zh-CN/scripts/445659-quickly-search)
