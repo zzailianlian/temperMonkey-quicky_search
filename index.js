@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      0.8
+// @version      0.9
 // @description  掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -55,6 +55,7 @@
       }
       // 掘金搜索
       if (window.location.origin.includes('juejin')) {
+        [...document.querySelector('.main-header').classList].includes('visible')?null:document.querySelector('.main-header').classList.add('visible')
         document.querySelector('input[type="search"]').focus()
       }
     }
