@@ -16,6 +16,7 @@
 // @match        https://juejin.cn/*
 // @match        https://juejin.im/*
 // @match        https://developer.chrome.com/*
+// @match        https://marketplace.visualstudio.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -57,6 +58,10 @@
       if (window.location.origin.includes('juejin')) {
         [...document.querySelector('.main-header').classList].includes('visible')?null:document.querySelector('.main-header').classList.add('visible')
         document.querySelector('input[type="search"]').focus()
+      }
+      // vscode-插件市场搜索
+      if (window.location.origin.includes('marketplace.visualstudio.com')) {
+        document.querySelector('.search-input').focus()
       }
     }
     // cmd + enter
