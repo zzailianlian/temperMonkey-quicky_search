@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  mobile.ant.mobile、掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -65,7 +65,7 @@
         document.querySelector('.search-input').focus()
       }
       // mobile ant design
-      if(window.location.origin.includesc('mobile.ant.design')){
+      if(window.location.origin.includes('mobile.ant.design')){
         document.querySelector('.__dumi-default-search-input').focus()
       }
     }
