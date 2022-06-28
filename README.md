@@ -29,7 +29,7 @@
 * mac：cmd + g
 * windows： windows + g
 
-**MDN、ant.mobile.design、掘金、google API、vscode插件市场搜索搜索同上**
+**gitlab、MDN、ant.mobile.design、掘金、google API、vscode插件市场搜索搜索同上**
 
 ### 入口
 * [Greasy Fork](https://greasyfork.org/zh-CN/scripts/445659-quickly-search)
