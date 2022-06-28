@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  mobile.ant.mobile、掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -18,6 +18,7 @@
 // @match        https://developer.chrome.com/*
 // @match        https://marketplace.visualstudio.com/*
 // @match        https://mobile.ant.design/*
+// @match        https://developer.mozilla.org/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -57,7 +58,7 @@
       }
       // 掘金搜索
       if (window.location.origin.includes('juejin')) {
-        [...document.querySelector('.main-header').classList].includes('visible')?null:document.querySelector('.main-header').classList.add('visible')
+        [...document.querySelector('.main-header').classList].includes('visible') ? null : document.querySelector('.main-header').classList.add('visible')
         document.querySelector('input[type="search"]').focus()
       }
       // vscode-插件市场搜索
@@ -65,8 +66,13 @@
         document.querySelector('.search-input').focus()
       }
       // mobile ant design
-      if(window.location.origin.includes('mobile.ant.design')){
+      if (window.location.origin.includes('mobile.ant.design')) {
         document.querySelector('.__dumi-default-search-input').focus()
+      }
+      // mdn
+      if (window.location.origin.includes('developer.mozilla.org')) {
+        const inputEl = document.querySelector('#hp-search-input') || document.querySelector('#top-nav-search-input')
+        inputEl.focus()
       }
     }
     // cmd + enter
