@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  mobile.ant.mobile、掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -21,6 +21,7 @@
 // @match        https://developer.mozilla.org/*
 // @match        http://gitlab.babytree-inc.com/*
 // @match        https://gitlab.babytree-inc.com/*
+// @match        https://hellogithub.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -81,6 +82,22 @@
         const inputEl = document.querySelector('input[type="search"]') || document.querySelector('#dashboard_search')
         inputEl.focus()
       }
+
+      // hello github
+      if (window.location.origin.includes('hellogithub')) {
+        const inputEl = document.querySelector('#search-input') || document.querySelector('#dashboard_search')
+        if (inputEl) {
+          inputEl.focus()
+        } else {
+          const homeEl = document.querySelector('.pure-menu-link')
+          homeEl.click()
+          setTimeout(() => {
+            const inputEl = document.querySelector('#search-input') || document.querySelector('#dashboard_search')
+            inputEl.focus()
+          }, 500);
+        }
+      }
+
     }
     // cmd + enter
     if (e && e.metaKey && e.keyCode == 13) {
