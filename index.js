@@ -2,7 +2,7 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      1.6
+// @version      1.7
 // @description  mobile.ant.mobile、掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
@@ -23,6 +23,7 @@
 // @match        https://gitlab.babytree-inc.com/*
 // @match        https://hellogithub.com/*
 // @match        https://react.docschina.org/*
+// @match        https://zh-hans.reactjs.org/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -99,7 +100,7 @@
         }
       }
       // react zh docs 
-      if (window.location.origin.includes('react.docschina.org')) {
+      if (window.location.origin.includes('react')) {
         const reactSearch = document.querySelector('#algolia-doc-search')
         if (reactSearch) {
           reactSearch.focus()
