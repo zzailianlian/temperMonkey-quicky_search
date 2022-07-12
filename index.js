@@ -2,11 +2,12 @@
 // @name:zh-CN   快捷搜索
 // @name         quickly search
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.8
 // @description  mobile.ant.mobile、掘金、npmjs、bilibibli、bootstracpCDN、splunk、google API 快捷搜索，更多快捷搜索
 // @license      MIT
 // @author       zzailianlian
 // @match        https://www.npmjs.com/*
+// @match        https://docs.npmjs.com/*
 // @match        http://portal.ai.babytree-inc.com/*
 // @match        https://www.bootcdn.cn/*
 // @match        https://www.bilibili.com/*
@@ -39,6 +40,10 @@
       // npmjs.com的搜索框定位
       if (window.location.origin.includes('www.npmjs.com')) {
         document.querySelector('input[type=\'search\']').focus()
+      }
+      // npmjs docs 搜索框定位
+      if (window.location.origin.includes('docs.npmjs.com')) {
+        document.querySelector('input[type=text]').focus()
       }
       // www.bootcdn.cn的搜索框定位
       if (window.location.origin.includes('www.bootcdn.cn')) {
