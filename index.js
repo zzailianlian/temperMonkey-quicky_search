@@ -26,6 +26,7 @@
 // @match        https://react.docschina.org/*
 // @match        https://zh-hans.reactjs.org/*
 // @match        https://eslint.org/docs/*
+// @match        https://prettier.io/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @grant        none
 // ==/UserScript==
@@ -117,6 +118,13 @@
         const eslintSearch = document.querySelector('#search')
         if (eslintSearch) {
           eslintSearch.focus()
+        }
+      }
+      // prettier.io
+      if (window.location.origin.includes('prettier.io')) {
+        const prettierSearch =document.querySelector('#search_input_react')
+        if (prettierSearch) {
+          prettierSearch.focus()
         }
       }
     }
