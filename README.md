@@ -1,5 +1,7 @@
 ### **`temperMonkey脚本`** 快捷搜索
 
+>! 该脚本不再维护，[更*新脚本在这里](https://github.com/zzailianlian/temperMonkey/tree/master/quickly_search)
+
 
 > 该脚本旨在使用一些常用网页时快捷定位到搜索框
 
