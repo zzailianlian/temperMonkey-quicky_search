@@ -3,6 +3,8 @@
 
 >! 该脚本不再维护，[更*新脚本在这里](https://github.com/zzailianlian/temperMonkey/tree/master/quickly_search)
 
+<span style="font-family: Source Code Pro; padding: 20px; background-color: #000000; color: #fff;">#000000</span>
+
 
 > 该脚本旨在使用一些常用网页时快捷定位到搜索框
 
